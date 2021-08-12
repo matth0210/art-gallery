@@ -1,0 +1,17 @@
+.photographerLabel {
+    margin-bottom: 0px;
+    display: flex;
+    align-items: center;
+}
+
+.downloadIcon {
+    width: 40px;
+    height: 40px;
+    color: #6C757D;
+    position: absolute;
+    right: 10px;
+}
+.downloadIcon:hover {
+    cursor: pointer;
+    color: black;
+}

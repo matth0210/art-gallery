@@ -1,0 +1,12 @@
+<div *ngIf="!(loading$ | async) || !(newSearch$ | async); else loading" class="row" infinite-scroll [infiniteScrollDistance]="2" (scrolled)="loadNextPage()">
+    <div class="column" *ngFor="let col of [].constructor(numberOfColumns); let i = index">
+        <ng-container *ngFor="let image of [].constructor(numberOfImagesPerColumn); let j = index">
+            <img [placeholder]="" [@fadeIn] [@.disabled]="newSearch$ | async" #tag (click)="openDialog(tag.data)" class="element" [data]="(images$ | async)[(j * numberOfColumns) + i]" [srcset]="(images$ | async)[(j * numberOfColumns) + i]?.src[size]"/>
+        </ng-container>
+    </div>
+</div>
+<ng-template #loading>
+    <div class="h-100 d-flex justify-content-center align-items-center">
+        <i class="fa fa-spinner fa-spin" style="font-size: 25px"></i>
+    </div>
+</ng-template>

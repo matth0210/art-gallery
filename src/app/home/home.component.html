@@ -1,0 +1,18 @@
+<div class="homeContainer">
+    <app-header></app-header>
+    <div class="navContainer">
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+              <a class="nav-link active" data-toggle="tab" href="#" routerLink="photos">Photos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" data-toggle="tab" href="#">Videos</a>
+            </li>
+          </ul>
+    </div>
+    <div class="homeRouterContainer">
+        <div class="contentArea">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

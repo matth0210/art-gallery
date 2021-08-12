@@ -1,0 +1,11 @@
+<div class="header">
+    <img class="h-100" src="/assets/images/headerImageCropped.jpg"/>
+    <div class="searchContainer input-group">
+        <input id="searchBox" [(ngModel)]="searchValue" (keydown.enter)="searchService.search(searchValue)" placeholder="Search for free photos" type="text" class="form-control form-control-lg">
+        <span class="input-group-append">
+            <button (click)="searchService.search(searchValue)" id="searchButton" class="btn btn-lg btn-outline-secondary border-left-0 border" type="button">
+                <i class="fa fa-search"></i>
+            </button>
+        </span>
+    </div>
+</div>
